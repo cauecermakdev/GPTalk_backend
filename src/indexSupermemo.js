@@ -1,0 +1,68 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+var supermemo_1 = require("supermemo");
+var item = {
+  interval: 0,
+  repetition: 0,
+  efactor: 2.5,
+};
+console.log(item);
+item = (0, supermemo_1.supermemo)(item, 5);
+console.log(item);
+item = (0, supermemo_1.supermemo)(item, 5);
+console.log(item);
+item = (0, supermemo_1.supermemo)(item, 5);
+console.log(item);
+item = (0, supermemo_1.supermemo)(item, 4);
+console.log(item);
+item = (0, supermemo_1.supermemo)(item, 3);
+console.log(item);
+
+item = (0, supermemo_1.supermemo)(item, 3);
+console.log(item);
+item = (0, supermemo_1.supermemo)(item, 3);
+item = (0, supermemo_1.supermemo)(item, 3);
+console.log(item);
+item = (0, supermemo_1.supermemo)(item, 2);
+console.log(item);
+item = (0, supermemo_1.supermemo)(item, 3);
+console.log(item);
+item = (0, supermemo_1.supermemo)(item, 5);
+console.log(item);
+item = (0, supermemo_1.supermemo)(item, 5);
+console.log(item);
+item = (0, supermemo_1.supermemo)(item, 5);
+console.log(item);
+item = (0, supermemo_1.supermemo)(item, 5);
+console.log(item);
+item = (0, supermemo_1.supermemo)(item, 5);
+console.log(item);
+item = (0, supermemo_1.supermemo)(item, 5);
+console.log(item);
+item = (0, supermemo_1.supermemo)(item, 5);
+console.log(item);
+item = (0, supermemo_1.supermemo)(item, 5);
+console.log(item);
+item = (0, supermemo_1.supermemo)(item, 5);
+console.log(item);
+item = (0, supermemo_1.supermemo)(item, 5);
+console.log(item);
+item = (0, supermemo_1.supermemo)(item, 5);
+console.log(item);
+item = (0, supermemo_1.supermemo)(item, 5);
+console.log(item);
+item = (0, supermemo_1.supermemo)(item, 5);
+console.log(item);
+item = (0, supermemo_1.supermemo)(item, 5);
+console.log(item);
+item = (0, supermemo_1.supermemo)(item, 3);
+item = (0, supermemo_1.supermemo)(item, 3);
+item = (0, supermemo_1.supermemo)(item, 2);
+console.log(item);
+item = (0, supermemo_1.supermemo)(item, 5);
+console.log(item);
+item = (0, supermemo_1.supermemo)(item, 5);
+console.log(item);
+item = (0, supermemo_1.supermemo)(item, 5);
+console.log(item);
+item = (0, supermemo_1.supermemo)(item, 5);console.log(item);

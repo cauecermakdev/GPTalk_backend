@@ -1,0 +1,53 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model User {
+  id        Int       @id @default(autoincrement())
+  name      String?   @default("")
+  email     String    @unique @db.VarChar(255)
+  whatsapp  String    @unique
+  password  String    @db.VarChar(255)
+  createdAt DateTime  @default(now())
+  updatedAt DateTime  @updatedAt
+  Session   Session[]
+  Payments  Payment[]
+}
+
+model Session {
+  id        Int      @id @default(autoincrement())
+  userId    Int
+  User      User     @relation(fields: [userId], references: [id])
+  token     String
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}
+
+model Word {
+  id         Int      @id @default(autoincrement())
+  word       String
+  interval   Int      @default(0) //score to ordain
+  //3 to i know and 2 to i dont know it 
+  efactor    Float    @default(2.5) //in my context i will use 3 or 2 //easyness factor(quality), answer user
+  repetition Int      @default(0)
+  createdAt  DateTime @default(now())
+  updatedAt  DateTime @default(now())
+}
+
+model Payment {
+  id          Int      @id @default(autoincrement())
+  amount      Float
+  description String
+  paymentDate DateTime
+  qrCodeUrl   String
+  user        User     @relation(fields: [userId], references: [id])
+  userId      Int
+}
